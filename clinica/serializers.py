@@ -41,11 +41,10 @@ class MascotaSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError('La mascota debe de tener un propietario.')
         return value
 
-# -----------------------------CONSULTA----------------------------------------------
 class ConsultaVeterinariaSerializer(serializers.ModelSerializer):
 
     motivo = serializers.CharField(allow_blank=True, allow_null=True)
-    
+
     class Meta:
         model = ConsultaVeterinaria
         fields = '__all__'
